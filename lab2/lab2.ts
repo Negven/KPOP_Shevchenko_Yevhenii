@@ -1,5 +1,8 @@
-import {worker} from "./types";
+import {Author, Librarian, PrizeLogger, worker} from "./types";
 import {Category} from "./Category";
+import {UniversityLibrarian} from "./classes/UniversityLibrarian";
+import {ReferenceItem} from "./classes/ReferenceItem";
+import {Encyclopedia} from "./classes/Encyclopedia";
 
 function getAllWorkers():worker[] {
     const workers: worker[] = [
@@ -29,8 +32,11 @@ function logWorkersNames(namesArray: string[]): void {
     namesArray.forEach(workerName => console.log(workerName))
 }
 
-function getWorkerByID(id: number): string {
-    const worker: worker = getAllWorkers().find(worker => worker.id === id);
+function getWorkerByID(id: number): worker {
+    return getAllWorkers().find(worker => worker.id === id);;
+}
+
+function printWorker(worker: worker): string {
     return `${worker.name} ${worker.surname}, salary: ${worker.salary}`;
 }
 
@@ -42,6 +48,31 @@ function createCustomer(name: string, age?: number, city?: string): void {
     console.log(`${name} ${age ? age + " " : ''}${city ? city : ''}`)
 }
 
+
+
+// lab2
+const logPrize: PrizeLogger = (name: string) => {
+    console.log(`Hi, ${name}`)
+}
+
+const favoriteAuthor: Author = {
+    name: "Andjei",
+    email: "andjeisabk@gmail.com",
+    numBooksPublished: 10
+}
+
+// const favoriteLibrarian: Librarian = {
+//     name: "Yevhenii",
+//     email: "yevhenii@gmail.com",
+//     department: "dep1",
+//     assistCustomer: (custName: string) => console.log("Hi, " + custName)
+// }
+
+
+const favoriteLibrarian: Librarian = new UniversityLibrarian("Yevhenii", "yevhenii@gmail.com", "dep1")
+
+// const ref = new ReferenceItem("titleName", 2023)
+
 console.log('1. ');
 logFirstAvailable(getAllWorkers())
 
@@ -49,7 +80,7 @@ console.log('2. ');
 logWorkersNames(getWorkersNamesByCategory(Category.Developer));
 
 console.log('3. ');
-console.log(getWorkerByID(2));
+console.log(printWorker(getWorkerByID(2)));
 
 console.log('4. ');
 const myId: string = createCustomerID('Ann', 10);
@@ -63,3 +94,16 @@ createCustomer("Yevhenii");
 createCustomer("Yevhenii", 20);
 createCustomer("Yevhenii", 20, "Kyiv");
 
+console.log("Lab 2")
+logPrize("Yevhenii");
+
+console.log(favoriteAuthor);
+favoriteLibrarian.assistCustomer("name1")
+
+// ref.printItem();
+// ref.publisher = "test string"
+// console.log(ref.publisher);
+
+const enc = new Encyclopedia("titleName", 2023, 2)
+enc.printItem();
+enc.printCitation();
