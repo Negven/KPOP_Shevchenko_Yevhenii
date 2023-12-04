@@ -1,0 +1,12 @@
+.line {
+  display: flex;
+}
+
+.cell {
+  margin-right: 5px;
+  text-align: center;
+}
+
+p {
+  margin: 2px 5px;
+}

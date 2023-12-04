@@ -1,0 +1,11 @@
+.line {
+  display: flex;
+}
+
+.cell {
+  margin-right: 5px;
+}
+
+p {
+  margin: 2px 5px;
+}
