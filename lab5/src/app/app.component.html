@@ -1,0 +1,14 @@
+<router-outlet></router-outlet>
+<h1>Улюбленні персонажі</h1>
+<div class="favorite-line table">
+  <div *ngFor="let character of favoriteCharacters">
+    <app-card (click)="openPopUp($event, character)" [character]="character"></app-card>
+  </div>
+</div>
+<h1>Усі персонажі</h1>
+<div class="table">
+  <div *ngFor="let character of characters ">
+    <app-card (click)="openPopUp($event, character); addFavorite($event, character)" [character]="character"></app-card>
+  </div>
+</div>
+<app-pop-up *ngIf="activeCharacter" (click)="closePopUp($event)" [character]="activeCharacter" ></app-pop-up>
