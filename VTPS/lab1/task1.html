@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Форма для додавання викладача</title>
+    <style>
+        form {
+            display: flex;
+            flex-direction: column;
+            width: 300px;
+            gap: 8px;
+        }
+    </style>
+</head>
+<body>
+<h1>Форма для додавання викладача</h1>
+<form action="#" method="post">
+    <label for="full_name">Повне ім'я:</label>
+    <input type="text" id="full_name" name="full_name" required>
+
+    <label for="gender">Стать:</label>
+    <select id="gender" name="gender" required>
+        <option value="male">Чоловіча</option>
+        <option value="female">Жіноча</option>
+    </select>
+
+    <label for="dob">Дата народження:</label>
+    <input type="date" id="dob" name="dob" required>
+
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" required>
+
+    <label for="phone">Телефон:</label>
+    <input type="tel" id="phone" name="phone" required>
+
+    <label for="background_color">Бажаний колір фону:</label>
+    <input type="color" id="background_color" name="background_color">
+
+    <label for="country">Країна:</label>
+    <input type="text" id="country" name="country" required>
+
+    <label for="city">Місто:</label>
+    <input type="text" id="city" name="city" required>
+
+    <label for="comment">Коментар:</label>
+    <textarea id="comment" name="comment"></textarea>
+
+    <button type="submit">Надіслати</button>
+</form>
+</body>
+</html>

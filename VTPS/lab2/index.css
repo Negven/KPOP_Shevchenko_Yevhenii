@@ -1,0 +1,300 @@
+nav:after {
+  content: "";
+  width: 500px;
+  height: 1px;
+  background: #000;
+  position: absolute;
+  left: 50%;
+  margin-left: -250px;
+}
+
+.header, .nav_menu {
+  display: flex;
+  justify-content: space-between;
+  max-width: 1000px;
+  margin: 30px auto;
+  padding: 0px 100px;
+}
+.header.nav_menu, .nav_menu.nav_menu {
+  align-items: baseline;
+}
+
+.logo {
+  text-decoration: none;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 37px;
+  font-weight: 900;
+  color: #fff;
+  -webkit-text-stroke: 1px #f76654;
+  text-shadow: 1px 2px 0px rgba(0, 0, 0, 0.6);
+  transition: text-shadow 0.2s;
+}
+.logo:hover {
+  text-shadow: 3px 2px 0px rgb(0, 0, 0);
+}
+
+.nav-searchbar {
+  width: 220px;
+  height: 30px;
+  margin-right: 20px;
+  transition: width 0.2s;
+}
+.nav-searchbar:hover, .nav-searchbar:focus {
+  width: 400px;
+}
+
+.nav-find, .lower-add {
+  width: 100px;
+  height: 35px;
+  border-radius: 0px;
+  background-color: #fff;
+  border: 1px solid #f76654;
+  color: #f76654;
+  font-weight: 600;
+  letter-spacing: 1px;
+  transition: all 0.2s;
+}
+.nav-find:hover, .lower-add:hover {
+  background-color: #f76654;
+  color: #fff;
+  cursor: pointer;
+}
+
+.lower-link {
+  font-size: 18px;
+  font-family: sans-serif;
+  text-decoration: none;
+  color: #f76654;
+  margin-right: 45px;
+  transition: color 0.2s;
+}
+.lower-link:hover {
+  color: #ce625d;
+}
+
+.lower-add {
+  width: 170px;
+  height: 55px;
+}
+
+main {
+  padding-top: 30px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+h1, h2 {
+  font-family: sans-serif;
+  width: fit-content;
+  margin: 0 auto;
+}
+h1.h2, h2.h2 {
+  font-size: 2em;
+  font-weight: bolder;
+}
+
+.filters {
+  margin-top: 30px;
+  max-width: 830px;
+  display: flex;
+  justify-content: space-around;
+}
+.filters .filter:not(:last-child) {
+  border-right: 1px dashed #767676;
+  padding-right: 25px;
+}
+
+label {
+  font-family: sans-serif;
+  color: #767676;
+}
+
+.map {
+  width: 350px;
+}
+
+.modal, .modalTeacher {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  padding-top: 100px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+  background-color: #fefefe;
+  margin: auto;
+  border: 1px solid #888;
+  width: 700px;
+}
+
+.modal_body {
+  padding: 10px;
+  display: flex;
+}
+
+.close {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.right_side {
+  padding-left: 30px;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.addModal {
+  width: 350px;
+}
+
+.modal__header {
+  display: flex;
+  padding: 10px;
+  color: #dddddd;
+  background: #444444;
+  justify-content: space-between;
+}
+
+.teacher-modal_body {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 20px;
+  gap: 20px;
+}
+
+.teacher-form__2x {
+  grid-column-start: 1;
+  grid-column-end: 3;
+}
+
+.teacher-form_radio {
+  display: flex;
+  grid-column-start: 1;
+  grid-column-end: 3;
+}
+
+form .lower-add {
+  width: 100%;
+}
+form textarea {
+  width: 100%;
+}
+form input, form select {
+  margin-top: 10px;
+  padding: 5px;
+  width: 100%;
+}
+
+.teacher_photo {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  border: 4px solid #f99589;
+  transition: all 0.2s;
+}
+.teacher_photo:hover {
+  transform: scale(1.1);
+  border: 4px solid #cc4836;
+  cursor: pointer;
+}
+
+.link_to_map {
+  padding: 20px;
+}
+
+.teachers {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  grid-column-gap: 60px;
+  padding-bottom: 30px;
+  justify-items: center;
+}
+.teachers .teacher__card {
+  max-width: 150px;
+  text-align: center;
+  margin-top: 60px;
+}
+.teachers .teacher__card .teacher_photo {
+  width: 150px;
+  border-radius: 50%;
+  border: 4px solid #f99589;
+  transition: all 0.2s;
+}
+.teachers .teacher__card .teacher_photo:hover {
+  transform: scale(1.1);
+  border: 4px solid #cc4836;
+  cursor: pointer;
+}
+.teachers .teacher__card .teacher__name, .teachers .teacher__card .teacher__specialty, .teachers .teacher__card .teacher__location {
+  font-family: sans-serif;
+  font-size: 22px;
+  color: #767676;
+}
+.teachers .teacher__card .teacher__name.teacher__specialty, .teachers .teacher__card .teacher__name.teacher__location, .teachers .teacher__card .teacher__specialty.teacher__specialty, .teachers .teacher__card .teacher__specialty.teacher__location, .teachers .teacher__card .teacher__location.teacher__specialty, .teachers .teacher__card .teacher__location.teacher__location {
+  font-size: 15px;
+}
+.teachers .teacher__card .teacher__name.teacher__location, .teachers .teacher__card .teacher__specialty.teacher__location, .teachers .teacher__card .teacher__location.teacher__location {
+  font-size: 13px;
+}
+
+.table {
+  margin-top: 30px;
+  width: 1000px;
+  border-collapse: collapse;
+}
+.table th, .table td {
+  font-family: sans-serif;
+  font-size: 15px;
+  padding: 10px;
+  text-align: center;
+}
+.table th.table-name, .table td.table-name {
+  text-align: left !important;
+}
+.table th.td, .table td.td {
+  font-size: 13px;
+}
+.table tr:nth-child(even) {
+  background-color: #f9f5f9;
+}
+
+@media screen and (max-width: 768px) {
+  .header, .nav_menu {
+    padding: 0px 20px;
+  }
+  .lower-link {
+    margin-right: 20px;
+  }
+  .nav-searchbar {
+    width: 165px;
+  }
+  .nav-searchbar:hover, .nav-searchbar:focus {
+    width: 165px;
+  }
+  .filter:not(:last-child) {
+    padding-right: 14px;
+  }
+  .table {
+    max-width: 1vw;
+    margin: 0 auto;
+  }
+  .lorem {
+    padding: 0px 20px;
+  }
+}
+
+/*# sourceMappingURL=index.css.map */
