@@ -1,0 +1,32 @@
+{
+  "extraTeachers": [
+    {
+      "id": "t50",
+      "fullName": "test",
+      "course": "mathematics",
+      "country": "Ukraine",
+      "city": "",
+      "email": "asd@sa.2",
+      "phone": "asdsa",
+      "birthDate": "2024-05-10",
+      "gender": "Female",
+      "backgroundColor": "#000000",
+      "note": "Commentasdsa",
+      "age": 0
+    },
+    {
+      "id": "t100",
+      "fullName": "test2",
+      "course": "it",
+      "country": "Ukraine",
+      "city": "adsa",
+      "email": "2qwsd@w.2",
+      "phone": "213213",
+      "birthDate": "2024-05-03",
+      "gender": "Female",
+      "backgroundColor": "#000000",
+      "note": "Comment",
+      "age": 0
+    }
+  ]
+}
