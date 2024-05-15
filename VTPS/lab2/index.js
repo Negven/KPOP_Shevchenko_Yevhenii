@@ -1,4 +1,3 @@
-
 var modal = document.getElementById("myModal");
 var modalTeacher = document.getElementById("modalTeacher");
 var span = document.querySelectorAll(".close");
